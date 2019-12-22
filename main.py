@@ -7,8 +7,8 @@ import discord
 
 import asyncio
 
-bot_channel_id = discord.Object(id='610739409658052609')
-oot_channel_id_list = ["610739409658052609","593990638916075520","590583414541910018","588070986554015764","605443517069656084"]
+bot_channel_id = discord.Object(id='643316408511365121')
+oot_channel_id_list = ["657955269086674955","655058181583667201","640877280960184332","640877254385336331","569420128794443776"]
 
 sent_new_message = False
 answer_scores = {
@@ -54,7 +54,7 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "ci":
+    if message.content.lower() == "q":
     
        if "590819962671726594" in [role.id for role in message.author.roles]:
            sent_new_message =False
@@ -87,7 +87,7 @@ async def on_ready():
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="confetti india Answers!!",type=1))
+    await bot.change_presence(game=discord.Game(name="loco Answers!!",type=1))
     await bot.send_message(bot_channel_id, "Connected with server.")
 
     
@@ -215,7 +215,7 @@ async def discord_send():
                 
                 if not sent_new_message:
                     
-                    embed=discord.Embed( description="**Connecting To confetti Server.**", color=0xfeae70)
+                    embed=discord.Embed( description="**Connecting To loco Server.**", color=0xfeae70)
                     embed.add_field(name="**__Answer 1__**", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="**__Answer 2__**", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="**__Answer 3__**", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
@@ -227,7 +227,7 @@ async def discord_send():
                     sent_new_message = True
                 else:
                     
-                    embed=discord.Embed( description="****Connecting To confetti Server.****", color=0xfeae70)
+                    embed=discord.Embed( description="****Connecting To loco Server.****", color=0xfeae70)
                     embed.add_field(name="**__Answer 1__**", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="**__Answer 2 __**", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="**__Answer 3__**", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)	
@@ -250,10 +250,10 @@ async def discord_send():
 loop = asyncio.get_event_loop()
 
 
-loop.create_task(bot.start("NjEwNzMyNzQ4MTIxOTY0NTQ1.XVJjOg.n93kmz0dy5IVg0Z5cwMiXHuh-wE")) 
+loop.create_task(bot.start("NjUyNDgzMzI5MTE1MDI5NTA0.Xf8z_Q.QCahGuHGd3x6MpFiq7VOD5c49co")) 
 
 
-loop.create_task(selfbot.start("NTA5MjQ2OTk5Njk5MzkwNDY0.XMfubA.zbL97cQKbddSio3wh-qnlUMWi1w", bot=False))
+loop.create_task(selfbot.start("NTQ5Nzc0MDA1MzE0NTE5MDQ0.XeTRxg.Z18gFvRAy95sDrqt_Xwea58V9JA", bot=False))
 
 
 
