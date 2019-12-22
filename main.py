@@ -54,7 +54,7 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "ci":
+    if message.content.lower() == "i":
     
        if "590819962671726594" in [role.id for role in message.author.roles]:
            sent_new_message =False
